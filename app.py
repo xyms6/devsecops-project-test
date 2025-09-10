@@ -9,7 +9,7 @@ def home():
 
 @app.route('/admin')
 def admin():
-    # CORRIGIDO: senha agora vem de variável de ambiente
+    
     password = os.getenv("ADMIN_PASSWORD", "senha_nao_definida")
     return f"Área admin — senha: {password}"
 
