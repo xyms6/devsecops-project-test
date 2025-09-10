@@ -42,4 +42,4 @@ jobs:
           package: .
 
       - name: Show deployment URL
-        run: echo "App deployed at: https://meu-devsecops-app-luis.azurewebsites.net" # ← ALTERE AQUI
+        run: echo "App deployed at: https://meu-devsecops-app-luis.azurewebsites.net"

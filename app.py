@@ -1,4 +1,5 @@
 from flask import Flask
+import os
 
 app = Flask(__name__)
 
@@ -8,8 +9,8 @@ def home():
 
 @app.route('/admin')
 def admin():
-    # ISSO É UMA VULNERABILIDADE INTENCIONAL — VAMOS DETECTAR DEPOIS!
-    password = "senha123"
+    # CORRIGIDO: senha agora vem de variável de ambiente
+    password = os.getenv("ADMIN_PASSWORD", "senha_nao_definida")
     return f"Área admin — senha: {password}"
 
 if __name__ == '__main__':
